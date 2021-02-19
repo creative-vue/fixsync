@@ -1,6 +1,6 @@
 {
-	"name": "vscode-sync",
-	"displayName": "vscode-sync",
+	"name": "fixsync",
+	"displayName": "fixsync",
 	"description": "vscode sync for chinese",
 	"version": "0.0.1",
 	"engines": {
@@ -10,16 +10,36 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:vscode-sync.syncSettings"
+		"onCommand:fixsync.syncSettings"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-sync.syncSettings",
+				"command": "fixsync.syncSettings",
 				"title": "同步设置（Sync Settings）"
 			}
-		]
+		],
+		"configuration": {
+			"title": "fixsync",
+			"properties": {
+				"fixsync.username": {
+					"type": "string",
+					"default": "",
+					"description": "用户名"
+				},
+				"fixsync.password": {
+					"type": "string",
+					"default": "",
+					"description": "密码"
+				},
+				"fixsync.url": {
+					"type": "string",
+					"default": "",
+					"description": "链接"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
