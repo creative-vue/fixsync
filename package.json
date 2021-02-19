@@ -1,5 +1,5 @@
 {
-  "name": "vscode-sync",
+	"name": "vscode-sync",
 	"displayName": "vscode-sync",
 	"description": "vscode sync for chinese",
 	"version": "0.0.1",
@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:vscode-sync.helloWorld"
+		"onCommand:vscode-sync.syncSettings"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vscode-sync.helloWorld",
-				"title": "Hello World"
+				"command": "vscode-sync.syncSettings",
+				"title": "同步设置（Sync Settings）"
 			}
 		]
 	},
